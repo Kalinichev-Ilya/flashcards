@@ -1,14 +1,29 @@
 <!DOCTYPE html>
 <html>
-  <head>
-    <title>Flashcards</title>
-    <%= csrf_meta_tags %>
+<head>
+  <title>Флэшкарточкер</title>
+  <%= stylesheet_link_tag 'application'%>
+  <nav class="navbar navbar-default">
+    <div class="container-fluid">
+      <div class="navbar-header">
+        <a class="navbar-brand" href="https://github.com/Kalinichev-Ilya/flashcards">
+          <%= image_tag 'GitHub-Mark-32px.png' %>
+        </a>
+      </div>
+    </div>
+  </nav>
+</head>
 
-    <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
-    <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
-  </head>
-
-  <body>
-    <%= yield %>
-  </body>
+<body>
+<section id="container">
+  <header class="clearfix">
+    <h1>Флэшкарточкер</h1>
+    <ul class="navigation-links">
+      <li><a href="#">Все карточки</a></li>
+      <li><a href="#">Добавить карточку</a></li>
+    </ul>
+  </header>
+  <%= yield %>
+</section>
+</body>
 </html>
