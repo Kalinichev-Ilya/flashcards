@@ -1,0 +1,26 @@
+<%= form_for (card), :html => {:class => 'form-horizontal center'} do |f| %>
+    <%= render 'common/errors', resource: @card %>
+
+    <div class="container">
+      <div class="jumbotron vertical-center">
+        <h2><%= "#{ card.new_record? ? 'Create Card' : 'Edit Card'}" %></h2>
+        <div class="form-group">
+          <%= f.label :original_text, class: "col-md-3 control-label" %>
+          <div class="col-md-8">
+            <%= f.text_field :original_text, class: "form-control" %>
+          </div>
+        </div>
+        <div class="form-group">
+          <%= f.label :translated_text, class: "col-md-3 control-label" %>
+          <div class="col-md-8">
+            <%= f.text_field :translated_text, class: "form-control" %>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-sm-offset-5 col-sm-2 text-center">
+            <%= f.submit "#{ card.new_record? ? 'Create' : 'Edit'}",
+                         class: "btn btn-primary center-block" %>            </div>
+        </div>
+      </div>
+    </div>
+<% end %>
