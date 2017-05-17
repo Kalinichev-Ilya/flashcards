@@ -3,7 +3,7 @@ class Card < ApplicationRecord
   validate :original_text_and_translated_text_cannot_be_equals
 
   before_create do
-    self.review_date = Time.now + (3 * 24 * 60 * 60)
+    self.review_date = 3.days.since
 
   end
 
@@ -12,8 +12,8 @@ class Card < ApplicationRecord
   private
 
   def strip_whitespace
-    self.original_text = self.original_text.strip
-    self.translated_text = self.translated_text.strip
+    self.original_text = self.original_text.strip.downcase
+    self.translated_text = self.translated_text.strip.downcase
   end
 
   def original_text_and_translated_text_cannot_be_equals
