@@ -1,0 +1,29 @@
+<div class="container">
+  <div class="jumbotron">
+    <h1>Card <%= @card.id %></h1>
+    <div class="row top-buffer">
+      <div class="col-md-6">
+        <h4>Original text:</h4>
+        <p><%= @card.original_text %></p>
+      </div>
+      <div class="col-md-6">
+        <h4>Translated text:</h4>
+        <p><%= @card.translated_text %></p>
+      </div>
+      <div class="col-md-12">
+        <strong>
+          - Review date: <%= @card.review_date.strftime('%d/%m/%Y') %>
+        </strong>
+      </div>
+      <div class="row">
+        <div class="col-sm-offset-5 col-md-4 text-center">
+          <%= link_to 'Edit', edit_card_path(@card), :class => "btn btn-primary btn-lg" %>
+          <%= link_to 'Destroy', card_path(@card),
+                      method: :delete,
+                      data: {confirm: 'Are you sure?'},
+                      :class => "btn btn-primary btn-lg"%>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
