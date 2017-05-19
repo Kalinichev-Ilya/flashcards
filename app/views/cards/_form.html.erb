@@ -1,6 +1,5 @@
 <%= form_for (card), :html => {:class => 'form-horizontal center'} do |f| %>
     <%= render 'common/errors', resource: @card %>
-
     <div class="container">
       <div class="jumbotron vertical-center">
         <h2><%= "#{ card.new_record? ? 'Create Card' : 'Edit Card'}" %></h2>

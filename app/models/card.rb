@@ -4,10 +4,13 @@ class Card < ApplicationRecord
 
   before_create do
     self.review_date = 3.days.since
-
   end
 
   before_validation :strip_whitespace, :only => [:original_text, :translated_text]
+
+  scope :reviewed_between, -> {
+    where('review_date <= ?', 3.days.ago)
+  }
 
   private
 

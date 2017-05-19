@@ -1,33 +1,62 @@
 #container {
-  margin: 48px auto;
-  width: 100%;
+    margin: 48px auto;
+    width: 100%;
 }
 
 #container > section {
-  clear: both;
+    clear: both;
 }
 
 #container > header {
-  margin-bottom: 46px;
+    margin-bottom: 46px;
 }
 
 #container > header > h1 {
-  float: left;
-  margin: 0;
+    float: left;
+    margin: 0;
 }
 
 .navigation-links {
-  float: right;
+    float: right;
 }
 
 .navigation-links li {
-  display: inline-block;
-  margin: 0 16px;
+    display: inline-block;
+    margin: 0 16px;
 }
 
 .navbar-brand {
     padding: 10px;
 }
+
 /* MISC */
 
-.clearfix:after {content:".";display:block;clear:both;visibility:hidden;line-height:0;height:0;} html[xmlns].clearfix{display:block;} * html .clearfix{height:1%;}
+.clearfix:after {
+    content: ".";
+    display: block;
+    clear: both;
+    visibility: hidden;
+    line-height: 0;
+    height: 0;
+}
+
+html[xmlns].clearfix {
+    display: block;
+}
+
+* html .clearfix {
+    height: 1%;
+}
+
+.check-card {
+    background-color: #eee;
+    padding: 5%;
+}
+
+.center-block {
+    display: block;
+    margin-left: 35%;
+    margin-right: 35%;
+}
+
+.
