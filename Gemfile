@@ -5,8 +5,9 @@ git_source(:github) do |repo_name|
   "https://github.com/#{repo_name}.git"
 end
 
+gem 'interactor'
 gem 'nokogiri'
-gem 'simple_form'
+# gem 'simple_form'
 gem 'pg'
 gem 'rubocop', '~> 0.48.1', require: false
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
