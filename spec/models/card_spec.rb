@@ -2,8 +2,6 @@ require 'rails_helper'
 require 'card.rb'
 
 RSpec.describe Card, type: :model do
-
-
   it 'validates presence of card text' do
     card = Card.new(original_text: 'one', translated_text: 'ainz')
     expect(card).to be_valid
@@ -18,7 +16,7 @@ RSpec.describe Card, type: :model do
   it 'should remove extra space when validated' do
     card = Card.new(original_text: ' one ', translated_text: ' ainz ')
     card.valid?
-    card.original_text.should  eq('one')
+    card.original_text.should eq('one')
     card.translated_text.should eq('ainz')
   end
 
