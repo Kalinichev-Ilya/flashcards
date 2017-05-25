@@ -96,6 +96,7 @@ RSpec.describe CardsController, type: :controller do
         expect(response).to redirect_to :card
       end
     end
+
     context 'invalid attributes' do
       before do
         attributes = attributes_for(:invalid_card)

@@ -1,7 +1,9 @@
 FactoryGirl.define do
   factory :card do
-    original_text 'one'
-    translated_text 'ainz'
+    id '1'
+    original_text 'wie'
+    translated_text 'as'
+    review_date '2017-05-20 13:59:45'
   end
 
   factory :invalid_card, class: 'Card' do
